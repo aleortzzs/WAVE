@@ -1,0 +1,45 @@
+#logo{
+    height: 45px;
+    width: auto;
+    margin: 10px;
+}
+
+#search{
+    background-color: #E6E6E6;
+    height: 40px;
+    margin: 12px;
+    border-radius: 25px;
+}
+
+#searchi{
+    height: 45px;
+    width: auto;
+}
+
+#su-li{
+    background-color: #E6E6E6;
+    border-radius: 25px;
+}
+
+.nav-wrapper{
+    background-color: #0b090a;
+}
+
+.row{
+    margin:0px;
+}
+
+.cajita:active{
+    background-color: transparent;
+}
+.blogin{
+    background-color: #E6E6E6;
+    width:84px;
+    height: 40px;
+    border-radius: 25px;
+}
+
+.iii{
+    color: #d7142b;
+    font-size: 26px;
+}
