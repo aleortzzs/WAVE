@@ -1,0 +1,67 @@
+.nav-wrapper{
+    background-color: #0b090a;
+    font-family: 'Inter', sans-serif;
+    color: #E6E6E6;
+}
+
+.desc-text{
+    font-weight: lighter;
+    color: #E0D6EF;
+}
+
+p{
+    font-family: 'Heebo', sans-serif;
+}
+.p{
+    padding-bottom: 32px !important;
+    font-size: 30px;
+}
+
+.card-subtitle{
+    position:absolute;
+    padding-top: 24px;
+    padding-bottom: 12px;
+    padding-left: 24px;
+    padding-right: 24px;
+    bottom: 0;
+    font-size: 18px;
+    font-family: 'Heebo', sans-serif;
+}
+
+.tags-b{
+    background-color: #E6E6E6;
+    border-radius: 15px;
+    margin-right: 15px;
+    color:#B1A6A6;
+    text-transform: none;
+    display: inline-block;
+}
+.dropdown-content li>a, .dropdown-content li>span {
+    font-size: 14px;
+    color: #B1A6A6;
+    background-color: #E6E6E6;
+    display: block;
+    line-height: 22px;
+    padding: 14px 16px;
+}
+.dropdown-content li a:hover {
+    background-color: #D5D5D5;
+  }
+
+.card-wrapper{
+    background-color: #11103d;
+    border-radius: 25px;
+    color: #F5F3F4;
+    height: 420px;
+    margin-right: 20px;
+}
+
+.precio{
+    background-color: #d7142b;
+    border-radius: 25px;
+    color: #EFD6D6;
+    text-transform: none;
+    position: absolute;
+    bottom: 20px;
+    left: 25px;
+}

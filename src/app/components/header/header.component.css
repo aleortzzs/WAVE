@@ -24,7 +24,17 @@
 .nav-wrapper{
     background-color: #0b090a;
 }
-
+.dropdown-content li>a, .dropdown-content li>span {
+    font-size: 14px;
+    color: #B1A6A6;
+    background-color: #E6E6E6;
+    display: block;
+    line-height: 22px;
+    padding: 14px 16px;
+}
+.dropdown-content li a:hover {
+    background-color: #D5D5D5;
+  }
 .row{
     margin:0px;
 }
@@ -42,4 +52,9 @@
 .iii{
     color: #d7142b;
     font-size: 26px;
+}
+
+.boton{
+    background-color: transparent;
+    border-color: transparent;
 }
