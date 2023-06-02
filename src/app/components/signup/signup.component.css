@@ -1,0 +1,71 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  
+  .left {
+    background-color: black;
+    padding: 20px;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  }
+  
+  .right {
+    background-color: #11103D;
+    padding: 20px;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+    
+  }
+  
+  #info{
+    background-color: #E6E6E6;
+    height: 60px;
+    margin: 12px;
+    border-radius: 25px;
+  }
+  
+  #info2{
+    background-color: #E6E6E6;
+    height: 60px;
+    margin: 12px;
+    border-radius: 25px;
+  }
+  #info3{
+    background-color: #E6E6E6;
+    height: 60px;
+    margin: 12px;
+    border-radius: 25px;
+  }
+  
+  label{
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #E6E6E6;
+  }
+  
+  .button-container{
+    align-items: center;
+  }
+  
+  .my-button{  /* Estilos de fondo */
+  background-color: #D7142B;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  }
+  
+  .my-button:hover {
+  background-color:  #e44457;
+  }

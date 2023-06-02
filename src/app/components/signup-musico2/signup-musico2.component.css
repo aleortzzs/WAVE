@@ -1,0 +1,256 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+  }
+
+  .card-1{
+    height: 100%;
+    min-height: 90vh;
+    background-color: #11103D;
+    border-radius: 25px;
+    margin-block-start: 35px; 
+  }
+ 
+  .card-2{
+    height: 100%;
+    min-height: 90vh;
+    background-color: #11103D;
+    border-radius: 25px;
+    margin-block-start: 35px; 
+  }
+  
+  .logo{
+    width: 350px;
+    height: auto;
+    margin-left: 50px;
+    margin-top: 40px;
+    
+  }
+
+  label{
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #E6E6E6;  
+    vertical-align: middle;  
+  }
+
+  #info{
+    background-color: #E6E6E6;
+    height: 40px;
+    width: 300px;
+    border-radius: 15px;
+  }
+
+  #birthday{
+    background-color: #E6E6E6;
+    height: 40px;
+    width: 300px;
+    margin: 10px;
+    border-radius: 15px;
+  }
+
+  .title{
+    color: white;
+    font-weight: bold;
+   }
+
+   .image-checkbox input[type="checkbox"] {
+    display: none;
+  }
+  
+  .image-checkbox label {
+    cursor: pointer;
+  }
+  
+  .image-checkbox label img {
+    opacity: 0.5;
+  }
+  
+  .image-checkbox input[type="checkbox"]:checked + label img {
+    opacity: 1;
+  }
+  
+  .cuadro1{
+    width: 135px;
+    height: 100px;
+    margin-top: 20px;
+    border-radius: 15px;
+  }
+
+  .cuadro2{
+    width: 135px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: -20px;
+    border-radius: 15px;
+  }
+
+  .cuadro3{
+    width: 135px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: -40px;
+    border-radius: 15px;
+  }
+
+  .cuadro4{
+    width: 135px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: -60px;
+    border-radius: 15px;
+  }
+  .cuadro5{
+    width: 135px;
+    height: 100px;
+    margin-top: -25px;
+    border-radius: 15px;
+  }
+
+  .cuadro6{
+    width: 135px;
+    height: 100px;
+    margin-top: -25px;
+    margin-left: -20px;
+    border-radius: 15px;
+
+  }
+
+  .cuadro7{
+    width: 135px;
+    height: 100px;
+    margin-top: -25px;
+    margin-left: -40px;
+    border-radius: 15px;
+
+  }
+
+  .cuadro8{
+    width: 135px;
+    height: 100px;
+    margin-top: -25px;
+    margin-left: -60px;
+    border-radius: 15px;
+
+  }
+  .cuadro9{
+    width: 135px;
+    height: 100px;
+    margin-top: -25px;
+    border-radius: 15px;
+  }
+
+  .cuadro10{
+    width: 135px;
+    height: 100px;
+    margin-top: -25px;
+    margin-left: -20px;
+    border-radius: 15px;
+
+  }
+
+  .cuadro11{
+    width: 135px;
+    height: 100px;
+    margin-top: -25px;
+    margin-left: -40px;
+    border-radius: 15px;
+
+  }
+
+  .cuadro12{
+    width: 135px;
+    height: 100px;
+    margin-top: -25px;
+    margin-left: -60px;
+    border-radius: 15px;
+
+  }
+  figure {
+    position: relative;
+    display: inline-block;
+    
+  }
+  
+  figcaption {
+    position: absolute;
+    bottom: 5px; /* Ajusta la posición vertical del texto */
+    left: 4px; 
+    color: white; /* Ajusta el color del texto */
+    padding: 5px; /* Ajusta el espaciado interno del texto */
+    font-size: small;
+  } 
+
+  #dos{
+    position: absolute;
+    left: -15px;
+  }
+
+  #tres{
+    position: absolute;
+    left: -23px;  
+  }
+
+  #cuatro{
+    position: absolute;
+    left: -23px;
+  }
+
+  #cinco{
+    position: absolute;
+    left: 37px;
+  }
+
+  #seis{
+    position: absolute;
+    left: 15px;
+  }
+
+  #siete{
+    position: absolute;
+    left: -8px; 
+  }
+
+  #ocho{
+    position: absolute;
+    left: -25px;
+  }
+
+  #nueve{
+    position: absolute;
+    left: 42px;
+  }
+
+  #diez{
+    position: absolute;
+    left: 14px;
+  }
+
+  #once{
+    position: absolute;
+    left: -17px;
+  }
+
+  #doce{
+    position: absolute;
+    left: -32px;
+  }
+
+  .my-button{  /* Estilos de fondo */
+    background-color: #D7142B;
+    color: white;
+    border-radius: 15px;
+    padding: 10px 60px;
+    font-size: 20px;
+    line-height: 1.5;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+    
+    .my-button:hover {
+    background-color:  #e44457;
+    }
+
