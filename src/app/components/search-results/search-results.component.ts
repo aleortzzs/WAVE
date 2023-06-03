@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./search-results.component.css']
 })
 export class SearchResultsComponent {
-
+  ngOnInit(): void {
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.dropdown-trigger');
+      var instances = M.Dropdown.init(elems);
+    });
+  }
 }
