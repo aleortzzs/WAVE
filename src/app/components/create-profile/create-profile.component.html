@@ -17,7 +17,6 @@
                             <div class="card-content inicio-text">
                                 <span class="card-title">Descripción</span>
                                 <textarea id="textarea2" class="desc-text texto" maxlength="205" placeholder="Ingresa tu descripción..."></textarea>
-                                <p id="counter"></p>
                             </div>
                         </div>
                     </div>
@@ -36,7 +35,7 @@
                                             <input type="file" multiple>
                                         </div>
                                         <div class="file-path-wrapper">
-                                            <input class="file-path validate" type="text" placeholder="Selecciona tus fotos">
+                                            <input class="file-path validate" type="text" style="width:94%;border-radius: 22px; height: 45px;font-size: 14px;" placeholder="Selecciona tus fotos">
                                         </div>
                                     </div>
                                 </form>
@@ -57,42 +56,33 @@
                 <div class="row">
                     <div class="col l10">
                         <h3 class="inicio-text">Experiencia</h3>
-                        <div class="card horizontal cuadro-desc">
-                            <div class="card-panel valign-wrapper titulo-experiencia">
-                                    <span class="inicio-text">
-                                        Jaguar Mexicali
-                                    </span>
-                            </div>
+                        <div *ngFor="let cuadro of cuadros" class="card horizontal cuadro-desc">
                             <div class="card-content inicio-text">
-                                <span class="card-title">Guitarrista</span>
-                                <span>2021 - Presente</span>
-                                <p class="desc-text">Grupo versátil para todo tipo de eventos, con mas de 40 años de experiencia en Mexicali, Baja California. Contamos con una gran variedad de generos listos para hacerte disfrutar</p>
+                                <input type="text" style="width: 41%; font-size: 18px;margin-right: 20px;" placeholder="Nombre banda o evento">
+                                <input type="text" style="width: 51%; font-size: 18px;" placeholder="¡Indica tu papel! Ej: Guitarrista"> <br>
+                                <input type="text" style="width: 28%; font-size: 14px" placeholder="año inicio - año final"><br>
+                                <textarea id="textarea2" class="desc-text textoexp" maxlength="120" placeholder="Ingresa pequeña descripción..."></textarea>
                             </div>
                         </div>
-                        <br>
-                        <div class="card horizontal cuadro-desc">
-                            <div class="card-panel valign-wrapper titulo-experiencia">
-                                    <span class="inicio-text">
-                                        Emma Avenue
-                                    </span>
-                            </div>
-                            <div class="card-content inicio-text">
-                                <span class="card-title">Guitarrista</span>
-                                <span>2021 - Presente</span>
-                                <p class="desc-text">Grupo versátil para todo tipo de eventos, con mas de 40 años de experiencia en Mexicali, Baja California. Contamos con una gran variedad de generos listos para hacerte disfrutar</p>
-                            </div>
+                        <div style="display:flex;justify-content: center;">
+                            <button (click)="agregarCuadro()" class="wave inicio-text" style="font-size: 22px;">Agregar experiencia</button>
                         </div>
                     </div>
-
+                    <br>
+                    <br>
+                    <br>
+                    <br>
                 </div>
             </div>
             <div class="col l5 fixed">
                 <div class="col s12 m7">
                     <div class="card cuadro-desc inicio-text sizec">
                         <div class="card-image">
-                            <img style="border-radius: 30px; max-height: 300px;
-                                object-fit: cover;" src="../../../assets/resources/manuelprofile.png">
-                            <span class="card-title desc-text">Mexicali, Baja California</span>
+                            <label for="fileInput">
+                                <img style="border-radius: 30px; max-height: 300px;
+                                    object-fit: cover; cursor: pointer; background-color: #e6e6e6;"  [src]="selectedImage ? selectedImage : '../../../assets/icons/user.png'" alt="Imagen de perfil">
+                            </label>
+                            <input id="fileInput" type="file" accept="image/jpeg, image/png" (change)="onFileSelected($event)" style="display: none;">
                         </div>
                         <div class="card-content">
                         <div class="row nomargen">
@@ -102,7 +92,7 @@
                                 <p>¿Abierto a collabs?</p>
                             </div>
                             <div class="col l3 center">
-                                <input type="text" class="inputp">
+                                <input type="text" class="inputp" placeholder="$$">
                                 <select class="select-wrapper">
                                     <option value="si">Sí</option>
                                     <option value="no">No</option>
