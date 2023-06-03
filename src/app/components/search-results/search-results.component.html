@@ -50,60 +50,7 @@
     <div class="row">
         <div class="col l11 push-l1">
             <div class="row">
-                <div class="col l3">
-                    <div class="card card-wrapper">
-                        <div class="card-image">
-                            <img style="border-radius: 25px;
-                            max-height: 258px;
-                            max-width: 376px;
-                            object-fit: cover;" src="../../assets/resources/miguelprofile.png">
-                            <span class="card-title p">Miguel</span>
-                            <span class="card-subtitle desc">Guadalajara, Jalisco</span>
-                        </div>
-                        <div class="card-content">
-                            <p>Guitarrista experimentado de 27 años, he participado en diferentes bandas. Domino la guitarra acústica, y también el bajo. 
-                            </p>
-                            <br>
-                            <a class="btn precio">$15/hr</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col l3">
-                    <div class="card card-wrapper">
-                        <div class="card-image">
-                            <img style="border-radius: 25px;
-                            max-height: 258px;
-                            max-width: 376px;
-                            object-fit: cover;" src="../../assets/resources/marianaprofile.png">
-                            <span class="card-title p">Mariana</span>
-                            <span class="card-subtitle desc">Los Ángeles, California</span>
-                        </div>
-                        <div class="card-content">
-                            <p class="desc-text">Tengo 28 años y toco la guitarra acústica, clásica de 12 cuerdas y otros instrumentos también.
-                            </p>
-                            <br>
-                            <a class="btn precio">$20/hr</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col l3">
-                    <div class="card card-wrapper">
-                        <div class="card-image">
-                            <img style="border-radius: 25px;
-                            max-height: 258px;
-                            max-width: 376px;
-                            object-fit: cover;" src="../../assets/resources/manuelprofile.png">
-                            <span class="card-title p">Manuel</span>
-                            <span class="card-subtitle desc">Mexicali, Baja California</span>
-                        </div>
-                        <div class="card-content">
-                            <p>Guitarrista de 20 años de edad con experiencia en divesos grupos, experiencia en musica versátil.
-                            </p>
-                            <br>
-                            <a class="btn precio">$20/hr</a>
-                        </div>
-                    </div>
-                </div>
+                <app-usuario-card *ngFor="let usuario of usuarioService.usuarios"[data]="usuario"></app-usuario-card>
             </div>
         </div>
     </div>

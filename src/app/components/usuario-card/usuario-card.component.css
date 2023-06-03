@@ -1,0 +1,39 @@
+.card-wrapper{
+    background-color: #11103d;
+    border-radius: 25px;
+    color: #F5F3F4;
+    height: 420px;
+    margin-right: 20px;
+}
+.card-subtitle{
+    position:absolute;
+    padding-top: 24px;
+    padding-bottom: 12px;
+    padding-left: 24px;
+    padding-right: 24px;
+    bottom: 0;
+    font-size: 18px;
+    font-family: 'Heebo', sans-serif;
+}
+
+.desc-text{
+    font-weight: lighter;
+    color: #E0D6EF;
+}
+
+p{
+    font-family: 'Heebo', sans-serif;
+}
+.p{
+    padding-bottom: 32px !important;
+    font-size: 30px;
+}
+.precio{
+    background-color: #d7142b;
+    border-radius: 25px;
+    color: #EFD6D6;
+    text-transform: none;
+    position: absolute;
+    bottom: 20px;
+    left: 25px;
+}

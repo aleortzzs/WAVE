@@ -1,6 +1,9 @@
 <body class="nav-wrapper">
     <br>
     <br>
+    <br>
+    <br>
+    <br>
     <div class="row">
         <div class="col l6 push-l2">
             <h2 class="inicio-text">
@@ -13,13 +16,21 @@
     <form class="row">
         <div class="input-field col s8 push-s1 valign-wrapper">
             <div class="col s6">
-                <input type="search" id="search" required placeholder="¿Qué buscas?">
+                <select class="buscador-wrapper">
+                    <option *ngFor="let instrumento of instrumentoService.instrumentos">{{instrumento.alias}}</option>
+                </select>
             </div>
             <div class="col s6">
                 <input type="search" id="search" required placeholder="Tipo de conexión">
             </div>
+            <div class="col l1">
+                <div class="center">
+                  <a href="http://localhost:4200/search-results" class="btn wave">Wave</a>
+                </div>
+              </div>
         </div>
     </form>
+    <br>
     <br>
     <br>
     <br>
