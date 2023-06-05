@@ -13,12 +13,12 @@
                 <div class="col l7 valign-wrapper">
                     <!-- dropdown de tipo-->
                     <ul id="tipo1" class="dropdown-content">
-                        <li><a href="#!">guitarristas</a></li>
-                        <li><a href="#!">bateristas</a></li>
-                        <li><a href="#!">vocalistas</a></li>
-                        <li><a href="#!">bajistas</a></li>
+                        <li><a >guitarristas</a></li>
+                        <li><a >bateristas</a></li>
+                        <li><a >vocalistas</a></li>
+                        <li><a >bajistas</a></li>
                     </ul>
-                    <a class="tags-b btn dropdown-trigger" href="#!" data-target="tipo1">búsqueda<i class="material-icons right">expand_more</i></a>
+                    <a class="tags-b btn dropdown-trigger" data-target="tipo1">búsqueda<i class="material-icons right">expand_more</i></a>
                     <!-- dropdown de ubi-->
                     <ul id="ubic" class="dropdown-content">
                         <li><a href="#!">Mexicali, BC</a></li>
@@ -48,7 +48,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col l11 push-l1">
+        <div class="col l10 push-l1">
             <div class="row">
                 <app-usuario-card *ngFor="let usuario of usuarioService.usuarios"[data]="usuario"></app-usuario-card>
             </div>

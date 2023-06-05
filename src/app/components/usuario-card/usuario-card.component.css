@@ -4,6 +4,7 @@
     color: #F5F3F4;
     height: 420px;
     margin-right: 20px;
+    cursor: pointer;
 }
 .card-subtitle{
     position:absolute;
@@ -36,4 +37,8 @@ p{
     position: absolute;
     bottom: 20px;
     left: 25px;
+    width: 50px;
+    height: 30px;
+    border: none;
+    font-family: 'Inter',sans-serif;
 }

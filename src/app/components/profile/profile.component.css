@@ -75,6 +75,15 @@ h2{
     border-radius: 50px;
     border-color: transparent;
 }
+.act{
+    background-color: #d7142b;
+    height: 30px;
+    width: 200px;
+    font-size: 40px;
+    border-radius: 50px;
+    border-color: transparent;
+    margin-top: 10%;
+}
 .titulo-experiencia{
     background-color: #d7142b;
     border-radius: 30px;

@@ -13,9 +13,13 @@ import { ProfileBComponent } from './components/profile-b/profile-b.component';
 import { CreateProfileComponent } from './components/create-profile/create-profile.component';
 import { SignupMusicoComponent } from './components/signup-musico/signup-musico.component';
 import { UsuarioCardComponent } from './components/usuario-card/usuario-card.component';
-
+import { UserResolver } from './Servicios/user-resolver.service';
+import { GenreService } from './Servicios/genre-service.service';
+import { UsuariosService} from './Servicios/usuarios.service';
+import { SignupComponent } from './components/signup/signup.component';
 @NgModule({
   declarations: [
+    SignupComponent,
     AppComponent,
     FooterComponent,
     HeaderComponent,
@@ -31,9 +35,9 @@ import { UsuarioCardComponent } from './components/usuario-card/usuario-card.com
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [UserResolver,GenreService, UsuariosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

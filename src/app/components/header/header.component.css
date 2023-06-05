@@ -43,7 +43,7 @@
     background-color: transparent;
 }
 .blogin{
-    background-color: #E6E6E6;
+    background-color: #E6E6E6 !important;
     width:84px;
     height: 40px;
     border-radius: 25px;

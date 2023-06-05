@@ -1,5 +1,5 @@
 export interface Usuarios{
-    id: string
+    _id: string
     nombre: string
     apellido: string
     correo: string
@@ -12,4 +12,6 @@ export interface Usuarios{
     calificacion: string
     collab: string
     localizacion: string
+    imagePath: string
+    short: string
 }

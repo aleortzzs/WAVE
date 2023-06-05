@@ -3,6 +3,10 @@
     </head>
     <body>
         <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <div class="row">
             <div class="col s4 push-s1">
                 <div class="card-1">
@@ -20,26 +24,26 @@
                             </div>
                             <div class="input-field">
                                 <div class="center">
-                                <label for="info" class="col s8 push-s2 "> Nombre </label>    
-                                <input type="text" id="info">
+                                <label for="nombre" class="col s8 push-s2 "> Nombre </label>    
+                                <input [(ngModel)]="data.nombre" [ngModelOptions]="{standalone:true}" type="text" id="nombre">
                                 </div>                       
                             </div>
                             <div class="input-field ">
                                 <div class="center">
-                                <label for="info" class="col s8 push-s2 "> Apellido </label>    
-                                <input type="text" id="info">
+                                <label for="apellido" class="col s8 push-s2 "> Apellido </label>    
+                                <input [(ngModel)]="data.apellido"  [ngModelOptions]="{standalone:true}"type="text" id="apellido">
                                 </div>                       
                             </div>
                             <div class="input-field ">
                                 <div class="center">
-                                <label for="info" class="col s8 push-s2"> País </label>
-                                <input type="text" id="info">
+                                <label for="localizacion" class="col s8 push-s2"> País </label>
+                                <input [(ngModel)]="data.localizacion"  [ngModelOptions]="{standalone:true}"type="text" id="localizacion">
                                 </div>                       
                             </div>
                             <div class="input-field ">
                                 <div class="center">
                                 <label for="birthday"> Fecha de Nacimiento  </label>
-                                <input type="date" id="birthday" name="birthday">
+                                <input [(ngModel)]="data.fecha"type="date" id="birthday" name="birthday">
                                 </div>                       
                             </div>
                         </form>
@@ -55,55 +59,55 @@
                               <div class="row">
                                 <div class="col s4">
                                     <div class="checkbox "> 
-                                        <input type="checkbox" id="checkbox1" name="opcion1" class="custom-checkbox">
+                                        <input type="checkbox" id="checkbox1" value="645fdcc629259a92bd21224d" name="opcion1" class="custom-checkbox">
                                         <label for="checkbox1"> Rock </label>
                                       </div>
                                     <div class="checkbox" style="margin-left: 0px;"> 
-                                        <input type="checkbox" id="checkbox2" name="opcion2" class="custom-checkbox" >
+                                        <input type="checkbox" id="checkbox2" value="645fdcc629259a92bd212251" name="opcion2" class="custom-checkbox" >
                                         <label for="checkbox2"> Pop </label>
                                       </div>                                              
                                     <div class="checkbox" style="margin-left: 0px;"> 
-                                        <input type="checkbox" id="checkbox3" name="opcion3" class="custom-checkbox" >
+                                        <input type="checkbox" id="checkbox3" value="645fdcc629259a92bd212254" name="opcion3" class="custom-checkbox" >
                                         <label for="checkbox3"> Punk Rock </label>
                                     </div>
                                     <div class="checkbox"> 
-                                        <input type="checkbox" id="checkbox4" name="opcion4" class="custom-checkbox" >
+                                        <input type="checkbox" id="checkbox4" value="645fdcc629259a92bd21224e" name="opcion4" class="custom-checkbox" >
                                         <label for="checkbox4"> Pop Punk</label>
                                     </div>
                                 </div>
                                 <div class="col s4">
                                     <div class="checkbox "> 
-                                        <input type="checkbox" id="checkbox5" name="opcion5" class="custom-checkbox">
+                                        <input type="checkbox" id="checkbox5" value="645fdcc629259a92bd212252" name="opcion5" class="custom-checkbox">
                                         <label for="checkbox5"> Funk </label>
                                       </div>
                                     <div class="checkbox" style="margin-left: 0px;"> 
-                                        <input type="checkbox" id="checkbox6" name="opcion6" class="custom-checkbox" >
+                                        <input type="checkbox" id="checkbox6" value="645fdcc629259a92bd212255" name="opcion6" class="custom-checkbox" >
                                         <label for="checkbox6"> Blues </label>
                                       </div>                                              
                                     <div class="checkbox" style="margin-left: 0px;"> 
-                                        <input type="checkbox" id="checkbox7" name="opcion7" class="custom-checkbox" >
+                                        <input type="checkbox" id="checkbox7" value="645fdcc629259a92bd21224f" name="opcion7" class="custom-checkbox" >
                                         <label for="checkbox7"> Jazz </label>
                                     </div>
                                     <div class="checkbox"> 
-                                        <input type="checkbox" id="checkbox8" name="opcion8"  class="custom-checkbox">
+                                        <input type="checkbox" id="checkbox8" value ="645fdcc629259a92bd212253" name="opcion8"  class="custom-checkbox">
                                         <label for="checkbox8"> Jazz Fusion </label>
                                       </div>
                                 </div>
                                 <div class="col s4">
                                     <div class="checkbox "> 
-                                        <input type="checkbox" id="checkbox9" name="opcion9" class="custom-checkbox" >
+                                        <input type="checkbox" id="checkbox9" value ="645fdcc629259a92bd212256" name="opcion9" class="custom-checkbox" >
                                         <label for="checkbox9"> Prog Rock </label>
                                       </div>
                                     <div class="checkbox"> 
-                                        <input type="checkbox" id="checkbox10" name="opcion10" class="custom-checkbox" >
+                                        <input type="checkbox" id="checkbox10" value="645fdcc629259a92bd212250" name="opcion10" class="custom-checkbox" >
                                         <label for="checkbox10"> Reggae </label>
                                       </div>                                              
                                     <div class="checkbox"> 
-                                        <input type="checkbox" id="checkbox11" name="opcion11" class="custom-checkbox" >
-                                        <label for="checkbox11"> Reggaeton </label>
+                                        <input type="checkbox" id="checkbox11" value="645fdcc629259a92bd212258" name="opcion11" class="custom-checkbox" >
+                                        <label for="checkbox11"> Cumbia </label>
                                     </div>
                                     <div class="checkbox"> 
-                                        <input type="checkbox" id="checkbox12" name="opcion12" class="custom-checkbox">
+                                        <input type="checkbox" id="checkbox12" value="645fdcc629259a92bd212257" name="opcion12" class="custom-checkbox">
                                         <label for="checkbox12"> Salsa </label>
                                       </div>
                                 </div>
@@ -117,6 +121,10 @@
             </div>
                 
           </div>
+          <br>
+          <br>
+          <br>
+          <br>
           <br>
           <br>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

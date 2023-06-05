@@ -8,6 +8,9 @@ import {NgForm} from '@angular/forms';
 })
 export class HeaderComponent implements OnInit {
 ngOnInit(): void {
-  
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    var instances = M.Dropdown.init(elems);
+    });
 }
 }

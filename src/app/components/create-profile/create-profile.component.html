@@ -10,13 +10,23 @@
                         <span class="badge tag-genero valign-wrapper inicio-text">versátil</span>
                     </div>
                 </div>
-                <h2 class="inicio-text"> Manuel Martínez</h2>
+                <h2 class="inicio-text"></h2>
+                <div class="row">
+                    <div class="col l10">
+                        <div class="card cuadro-descc">
+                            <div class="card-content inicio-text">
+                                <span class="card-title">Descripción corta</span>
+                                <textarea id="textarea2" [(ngModel)]="data.short" class="desc-text texto" maxlength="100" placeholder="Ingresa tu descripción..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col l10">
                         <div class="card cuadro-descc">
                             <div class="card-content inicio-text">
                                 <span class="card-title">Descripción</span>
-                                <textarea id="textarea2" class="desc-text texto" maxlength="205" placeholder="Ingresa tu descripción..."></textarea>
+                                <textarea id="textarea2" [(ngModel)]="data.descripcion" class="desc-text texto" maxlength="205" placeholder="Ingresa tu descripción..."></textarea>
                             </div>
                         </div>
                     </div>
@@ -92,7 +102,7 @@
                                 <p>¿Abierto a collabs?</p>
                             </div>
                             <div class="col l3 center">
-                                <input type="text" class="inputp" placeholder="$$">
+                                <input [(ngModel)]="data.precio" type="text" class="inputp" placeholder="$$">
                                 <select class="select-wrapper">
                                     <option value="si">Sí</option>
                                     <option value="no">No</option>
@@ -119,7 +129,7 @@
                         </div>
                     </div>
                     <div class="center">
-                        <button class="wave inicio-text"> Guardar perfil</button>
+                        <button class="wave inicio-text" (click)="addToSignUp2()"> Guardar perfil</button>
                     </div>
                     <br>
                 </div>
