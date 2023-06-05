@@ -13,6 +13,9 @@ import { ProfileBComponent } from './components/profile-b/profile-b.component';
 import { CreateProfileComponent } from './components/create-profile/create-profile.component';
 import { SignupMusicoComponent } from './components/signup-musico/signup-musico.component';
 import { UsuarioCardComponent } from './components/usuario-card/usuario-card.component';
+import { InstrumentosCardComponent } from './components/instrumentos-card/instrumentos-card.component';
+import { GenerosCardComponent } from './components/generos-card/generos-card.component';
+import { IntegrantesCardComponent } from './components/integrantes-card/integrantes-card.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { UsuarioCardComponent } from './components/usuario-card/usuario-card.com
     ProfileBComponent,
     CreateProfileComponent,
     SignupMusicoComponent,
-    UsuarioCardComponent
+    UsuarioCardComponent,
+    InstrumentosCardComponent,
+    GenerosCardComponent,
+    IntegrantesCardComponent
   ],
   imports: [
     BrowserModule,

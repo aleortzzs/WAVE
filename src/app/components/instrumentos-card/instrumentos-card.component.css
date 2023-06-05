@@ -1,42 +1,4 @@
-body, html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #0b090a;
-  font-family: "Inter", sans-serif;
-}
-.card-1{
-  height: 610px;
-  width:455px;
-  background-color: #11103D;
-  border-radius: 25px;
-  margin-block-start: 35px; 
-}
-.select-wrapper{
-  background-color: #E6E6E6;
-      height: 40px;
-      width: 120px;
-      font-family: 'Inter',sans-serif;
-      color:#B1A6A6;
-      border-radius: 15px;
-      padding: 0px 10px 0px 10px;
-      position: relative;
-      cursor: pointer;
-      border: none;
-      outline: none;
-      height: 2.8rem;
-      line-height: 3rem;
-      width: 70%;
-      left: 70px;
-      display: flex;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-      z-index: 1;
-}
- 
-  .card-2{
+.card-2{
     height: 610px;
     width: 750px;
     background-color: #11103D;
@@ -213,4 +175,3 @@ body, html {
     .my-button:hover {
     background-color:  #e44457;
     }
-
