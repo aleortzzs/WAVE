@@ -5,7 +5,7 @@ import { UsuariosService } from 'src/app/Servicios/usuarios.service';
   templateUrl: './create-profile.component.html',
   styleUrls: ['./create-profile.component.css']
 })
-export class CreateProfileComponent {
+export class CreateProfileComponent implements AfterViewInit {
   cuadros: any[] = []; // Variable de matriz para almacenar los cuadros adicionales
   @Input() data: any={
     short :'',
@@ -33,5 +33,18 @@ export class CreateProfileComponent {
       };
       reader.readAsDataURL(file);
     }
+  }
+  audioSrc!: string;
+
+  handleFiles(event: any) {
+    const files = event.target.files;
+    this.audioSrc = URL.createObjectURL(files[0]);
+    const audioElement = document.getElementById("audio") as HTMLAudioElement;
+    audioElement.load();
+  }
+
+
+  ngAfterViewInit(): void {
+    
   }
 }

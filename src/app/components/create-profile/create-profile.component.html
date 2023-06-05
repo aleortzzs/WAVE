@@ -36,8 +36,7 @@
                         <div class="card cuadro-desc" style="height: 300px;">
                             <span class="card-title galeria-titulo">Galería</span>
                             <div class="card-content">
-                                <br>
-                                <br>
+                                <br><br>
                                 <form action="#">
                                     <div class="file-field input-field">
                                         <div class="btn precio">
@@ -56,7 +55,20 @@
                         <div class="card cuadro-desc">
                             <div class="card-content inicio-text cuadrop">
                                 <span class="card-title">Snippets</span>
-                                <p>jj</p>
+                                <div class="center">
+                                    <input type="file" id="upload" accept="audio/*" (change)="handleFiles($event)" />
+                                    <div class="audio">
+                                        <audio id="audio" controls>
+                                            <source [src]="audioSrc" />
+                                        </audio>
+                                    </div>
+                                    <input type="file" id="upload" accept="audio/*" (change)="handleFiles($event)" />
+                                    <div class="audio">
+                                        <audio id="audio" controls>
+                                            <source [src]="audioSrc" />
+                                        </audio>
+                                    </div>
+                                </div>
                             </div>
 
                         </div>

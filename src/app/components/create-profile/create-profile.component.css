@@ -189,3 +189,10 @@ input:not([type]), input[type=text]:not(.browser-default) {
     margin-bottom: 5px;
     margin-top:2px;
 }
+input#upload{
+    cursor:pointer;
+}
+audio{
+    width: 278px;
+    
+}
