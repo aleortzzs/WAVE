@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule } from '@angular/forms';
 import { SignupMusicoComponent } from './signup-musico.component';
+import { NgModule } from '@angular/core';
+
 
 describe('SignupMusicoComponent', () => {
   let component: SignupMusicoComponent;

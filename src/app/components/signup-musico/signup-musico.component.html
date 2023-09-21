@@ -11,7 +11,7 @@
                             <div class="input-field"  >    
                                 <div class="center" >   
                                     <label for="info" class="col s8 push-s2"> Tipo de Perfil </label>  
-                                    <select class="select-wrapper">
+                                    <select class="select-wrapper" [(ngModel)]="selectedOption">
                                         <option value="" disabled selected>Selecciona</option>
                                         <option value="musico_artista">Músico/artista</option>
                                         <option value="banda_dueto">Banda/dueto/etc.</option>
@@ -46,7 +46,7 @@
                     </div>
                 </div>
             <div class="col s6 push-s1">
-                <app-generos-card></app-generos-card>
+                <app-generos-card [selectedOption]="selectedOption"></app-generos-card>
             </div>
                 
           </div>

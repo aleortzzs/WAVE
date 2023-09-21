@@ -20,6 +20,10 @@ html, body{
     height: 360px; 
     width: 360px; /* Set the desired margin */
   }
+  .iconitos{
+    width: 37px;
+    height: 37px;
+}
 
   .rectangle-container{
     margin-bottom: 20px;
@@ -98,6 +102,10 @@ h1 {
   margin-right: auto;
   margin-bottom: 0px; 
 }
+.centrar{
+  display: flex;
+  justify-content: center;
+}
 .wave{
   font-family: "Inter",sans-serif;
   background-color: #d7142b;
@@ -108,6 +116,9 @@ h1 {
   width: 232px;
   font-size: 40px;
   line-height: 70px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ubi-titulo{

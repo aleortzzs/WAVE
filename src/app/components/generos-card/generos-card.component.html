@@ -60,9 +60,14 @@
                       </div>
                 </div>
               </div>
-            <div class="center"> 
-                <a class="my-button">Siguiente</a>
+              <div class="center"> 
+                <a class="my-button" (click)="mostrarComponente()">Siguiente</a>
               </div>
           </div>
+          <!-- Mostrar app-instrumentos-card si selectedOption es 'musico_artista' -->
+          <app-instrumentos-card *ngIf="selectedOption === '0'"></app-instrumentos-card>
+          
+          <!-- Mostrar app-integrantes-card si selectedOption es 'banda_dueto' -->
+          <app-integrantes-card *ngIf="selectedOption === '1'"></app-integrantes-card>
     </form>
 </div>
