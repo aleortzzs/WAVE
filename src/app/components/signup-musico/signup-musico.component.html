@@ -3,6 +3,10 @@
     </head>
     <body>
         <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <div class="row">
             <div class="col s4 push-s1">
                 <div class="card-1">
@@ -20,36 +24,40 @@
                             </div>
                             <div class="input-field">
                                 <div class="center">
-                                <label for="info" class="col s8 push-s2 "> Nombre </label>    
-                                <input type="text" id="info">
+                                <label for="nombre" class="col s8 push-s2 "> Nombre </label>    
+                                <input [(ngModel)]="data.nombre" [ngModelOptions]="{standalone:true}" type="text" id="nombre">
                                 </div>                       
                             </div>
                             <div class="input-field ">
                                 <div class="center">
-                                <label for="info" class="col s8 push-s2 "> Apellido </label>    
-                                <input type="text" id="info">
+                                <label for="apellido" class="col s8 push-s2 "> Apellido </label>    
+                                <input [(ngModel)]="data.apellido"  [ngModelOptions]="{standalone:true}"type="text" id="apellido">
                                 </div>                       
                             </div>
                             <div class="input-field ">
                                 <div class="center">
-                                <label for="info" class="col s8 push-s2"> País </label>
-                                <input type="text" id="info">
+                                <label for="localizacion" class="col s8 push-s2"> País </label>
+                                <input [(ngModel)]="data.localizacion"  [ngModelOptions]="{standalone:true}"type="text" id="localizacion">
                                 </div>                       
                             </div>
                             <div class="input-field ">
                                 <div class="center">
-                                <label for="birthday"> Fecha de nacimiento/fundación  </label>
-                                <input type="date" id="birthday" name="birthday">
+                                <label for="birthday"> Fecha de Nacimiento  </label>
+                                <input [(ngModel)]="data.fecha"type="date" id="birthday" name="birthday">
                                 </div>                       
                             </div>
                         </form>
                     </div>
                 </div>
             <div class="col s6 push-s1">
-                <app-generos-card [selectedOption]="selectedOption"></app-generos-card>
+                <app-generos-card></app-generos-card>
             </div>
                 
           </div>
+          <br>
+          <br>
+          <br>
+          <br>
           <br>
           <br>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

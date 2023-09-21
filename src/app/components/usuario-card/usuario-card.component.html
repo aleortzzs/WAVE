@@ -4,12 +4,12 @@
             <img style="border-radius: 25px;
             max-height: 258px;
             max-width: 415px;
-            object-fit: cover;" src="../../assets/resources/miguelprofile.png">
+            object-fit: cover;" src="{{data.imagePath}}">
             <span class="card-title p">{{data.nombre}}</span>
             <span class="card-subtitle desc">{{data.localizacion}}</span>
         </div>
         <div class="card-content">
-            <p>{{data.descripcion}} 
+            <p>{{data.short}} 
             </p>
             <br>
             <a href="http://localhost:4200/profile"class="btn precio">${{data.precio}}</a>

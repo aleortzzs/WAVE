@@ -37,13 +37,27 @@ body, html {
     vertical-align: middle;  
   }
 
-  #info{
+  #nombre{
     background-color: #E6E6E6;
     height: 40px;
     width: 300px;
     border-radius: 15px;
     padding: 0px 10px 0px 10px;
   }
+#apellido{
+  background-color: #E6E6E6;
+    height: 40px;
+    width: 300px;
+    border-radius: 15px;
+    padding: 0px 10px 0px 10px;
+}
+#localizacion{
+  background-color: #E6E6E6;
+    height: 40px;
+    width: 300px;
+    border-radius: 15px;
+    padding: 0px 10px 0px 10px;
+}
   .select-wrapper{
     background-color: #E6E6E6;
         height: 40px;
@@ -107,6 +121,9 @@ body, html {
     line-height: 1.5;
     cursor: pointer;
     transition: background-color 0.3s ease;
+  }
+  .select-wrapper:hover{
+    background-color: transparent;
   }
   
   input[type="checkbox"]:checked + label {

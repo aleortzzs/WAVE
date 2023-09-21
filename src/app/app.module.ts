@@ -16,9 +16,13 @@ import { UsuarioCardComponent } from './components/usuario-card/usuario-card.com
 import { InstrumentosCardComponent } from './components/instrumentos-card/instrumentos-card.component';
 import { GenerosCardComponent } from './components/generos-card/generos-card.component';
 import { IntegrantesCardComponent } from './components/integrantes-card/integrantes-card.component';
-
+import { UserResolver } from './Servicios/user-resolver.service';
+import { GenreService } from './Servicios/genre-service.service';
+import { UsuariosService} from './Servicios/usuarios.service';
+import { SignupComponent } from './components/signup/signup.component';
 @NgModule({
   declarations: [
+    SignupComponent,
     AppComponent,
     FooterComponent,
     HeaderComponent,
@@ -37,9 +41,9 @@ import { IntegrantesCardComponent } from './components/integrantes-card/integran
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [UserResolver,GenreService, UsuariosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

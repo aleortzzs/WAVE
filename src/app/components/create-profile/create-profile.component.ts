@@ -1,5 +1,5 @@
-import { Component, AfterViewInit } from '@angular/core';
-
+import { Component, AfterViewInit,Input } from '@angular/core';
+import { UsuariosService } from 'src/app/Servicios/usuarios.service';
 @Component({
   selector: 'app-create-profile',
   templateUrl: './create-profile.component.html',
@@ -7,13 +7,21 @@ import { Component, AfterViewInit } from '@angular/core';
 })
 export class CreateProfileComponent implements AfterViewInit {
   cuadros: any[] = []; // Variable de matriz para almacenar los cuadros adicionales
-
+  @Input() data: any={
+    short :'',
+    descripcion:'',
+    precio:'',
+    collab:'',
+  };
+  constructor(public usuarioService: UsuariosService){}
   agregarCuadro() {
     this.cuadros.push({}); // Agregar un nuevo cuadro vacío a la matriz
   }
 
   selectedImage: string | ArrayBuffer | null = null;
-
+  addToSignUp2(){
+    this.usuarioService.addToSignUp2(this.data);
+  }
   onFileSelected(event: any) {
     const file = event.target.files[0];
     if (file) {

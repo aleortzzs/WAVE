@@ -1,21 +1,38 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
-
+import { Component, OnInit, AfterViewInit,Input } from '@angular/core';
+import { UsuariosService } from 'src/app/Servicios/usuarios.service';
 @Component({
   selector: 'app-signup-musico',
   templateUrl: './signup-musico.component.html',
   styleUrls: ['./signup-musico.component.css']
 })
 export class SignupMusicoComponent implements OnInit {
-  selectedOption: string = ''; // Propiedad para rastrear la selección
-  mostrarComponente() {
-    // Aquí maneja la lógica para cambiar el componente
-    if (this.selectedOption === 'musico_artista') {
-      // Lógica para mostrar app-instrumentos-card
-    } else if (this.selectedOption === 'banda_dueto') {
-      // Lógica para mostrar app-integrantes-card
-    }
+  data: any;
+
+  constructor(public usuarioService : UsuariosService){
   }
+
  ngOnInit(): void {
   
  }
+ addToSignUp(){
+  this.usuarioService.addToSignUp(this.data);
+ }
+ isSelected(genreId: string): boolean {
+  return this.data.genre.includes(genreId);
+}
+
+updateGenreSelection(target: HTMLInputElement, genreId: string) {
+  const checked = target.checked;
+
+  if (checked) {
+    // Checkbox is checked, add the genre ID to the selected genres array
+    this.data.generos.push(genreId);
+  } else {
+    // Checkbox is unchecked, remove the genre ID from the selected genres array
+    const index = this.data.generos.indexOf(genreId);
+    if (index > -1) {
+      this.data.generos.splice(index, 1);
+    }
+  }
+}
 }
