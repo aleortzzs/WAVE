@@ -15,7 +15,7 @@
                             <div class="input-field"  >    
                                 <div class="center" >   
                                     <label for="info" class="col s8 push-s2"> Tipo de Perfil </label>  
-                                    <select class="select-wrapper" [(ngModel)]="selectedOption">
+                                    <select class="select-wrapper">
                                         <option value="" disabled selected>Selecciona</option>
                                         <option value="musico_artista">Músico/artista</option>
                                         <option value="banda_dueto">Banda/dueto/etc.</option>
@@ -25,25 +25,25 @@
                             <div class="input-field">
                                 <div class="center">
                                 <label for="nombre" class="col s8 push-s2 "> Nombre </label>    
-                                <input [(ngModel)]="data.nombre" [ngModelOptions]="{standalone:true}" type="text" id="nombre">
+                                <input [(ngModel)]="data.nombre" [ngModelOptions]="{standalone: true}" type="text" id="nombre">
                                 </div>                       
                             </div>
                             <div class="input-field ">
                                 <div class="center">
                                 <label for="apellido" class="col s8 push-s2 "> Apellido </label>    
-                                <input [(ngModel)]="data.apellido"  [ngModelOptions]="{standalone:true}"type="text" id="apellido">
+                                <input [(ngModel)]="data.apellido" [ngModelOptions]="{standalone: true}" type="text" id="apellido">
                                 </div>                       
                             </div>
                             <div class="input-field ">
                                 <div class="center">
                                 <label for="localizacion" class="col s8 push-s2"> País </label>
-                                <input [(ngModel)]="data.localizacion"  [ngModelOptions]="{standalone:true}"type="text" id="localizacion">
+                                <input [(ngModel)]="data.pais" [ngModelOptions]="{standalone: true}" id="localizacion">
                                 </div>                       
                             </div>
                             <div class="input-field ">
                                 <div class="center">
                                 <label for="birthday"> Fecha de Nacimiento  </label>
-                                <input [(ngModel)]="data.fecha"type="date" id="birthday" name="birthday">
+                                <input [(ngModel)]="data.fecha" type="date" id="birthday" name="birthday">
                                 </div>                       
                             </div>
                         </form>

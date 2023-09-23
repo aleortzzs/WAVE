@@ -7,15 +7,15 @@
               <div class="row">
                 <div class="col s4">
                     <div class="checkbox "> 
-                        <input type="checkbox" id="checkbox1" name="opcion1" class="custom-checkbox">
+                        <input (change)="onCheckboxChange('Rock', $event)" type="checkbox" id="checkbox1" name="opcion1" class="custom-checkbox">
                         <label for="checkbox1"> Rock </label>
                       </div>
                     <div class="checkbox" style="margin-left: 0px;"> 
-                        <input type="checkbox" id="checkbox2" name="opcion2" class="custom-checkbox" >
+                        <input (change)="onCheckboxChange('Pop', $event)" type="checkbox" id="checkbox2" name="opcion2" class="custom-checkbox" >
                         <label for="checkbox2"> Pop </label>
                       </div>                                              
                     <div class="checkbox" style="margin-left: 0px;"> 
-                        <input type="checkbox" id="checkbox3" name="opcion3" class="custom-checkbox" >
+                        <input (change)="onCheckboxChange('Punk Rock', $event)" type="checkbox" id="checkbox3" name="opcion3" class="custom-checkbox" >
                         <label for="checkbox3"> Punk Rock </label>
                     </div>
                     <div class="checkbox"> 
@@ -25,49 +25,44 @@
                 </div>
                 <div class="col s4">
                     <div class="checkbox "> 
-                        <input type="checkbox" id="checkbox5" name="opcion5" class="custom-checkbox">
+                        <input  (change)="onCheckboxChange('Funk', $event)" type="checkbox" id="checkbox5" name="opcion5" class="custom-checkbox">
                         <label for="checkbox5"> Funk </label>
                       </div>
                     <div class="checkbox" style="margin-left: 0px;"> 
-                        <input type="checkbox" id="checkbox6" name="opcion6" class="custom-checkbox" >
+                        <input (change)="onCheckboxChange('Blues', $event)" type="checkbox" id="checkbox6" name="opcion6" class="custom-checkbox" >
                         <label for="checkbox6"> Blues </label>
                       </div>                                              
                     <div class="checkbox" style="margin-left: 0px;"> 
-                        <input type="checkbox" id="checkbox7" name="opcion7" class="custom-checkbox" >
+                        <input (change)="onCheckboxChange('jazz', $event)" type="checkbox" id="checkbox7" name="opcion7" class="custom-checkbox" >
                         <label for="checkbox7"> Jazz </label>
                     </div>
                     <div class="checkbox"> 
-                        <input type="checkbox" id="checkbox8" name="opcion8"  class="custom-checkbox">
+                        <input (change)="onCheckboxChange('Jazz Fusion', $event)" type="checkbox" id="checkbox8" name="opcion8"  class="custom-checkbox">
                         <label for="checkbox8"> Jazz Fusion </label>
                       </div>
                 </div>
                 <div class="col s4">
                     <div class="checkbox "> 
-                        <input type="checkbox" id="checkbox9" name="opcion9" class="custom-checkbox" >
+                        <input (change)="onCheckboxChange('Prog Rock', $event)" type="checkbox" id="checkbox9" name="opcion9" class="custom-checkbox" >
                         <label for="checkbox9"> Prog Rock </label>
                       </div>
                     <div class="checkbox"> 
-                        <input type="checkbox" id="checkbox10" name="opcion10" class="custom-checkbox" >
+                        <input (change)="onCheckboxChange('Reggae', $event)" type="checkbox" id="checkbox10" name="opcion10" class="custom-checkbox" >
                         <label for="checkbox10"> Reggae </label>
                       </div>                                              
                     <div class="checkbox"> 
-                        <input type="checkbox" id="checkbox11" name="opcion11" class="custom-checkbox" >
+                        <input (change)="onCheckboxChange('Reggaeton', $event)" type="checkbox" id="checkbox11" name="opcion11" class="custom-checkbox" >
                         <label for="checkbox11"> Reggaeton </label>
                     </div>
                     <div class="checkbox"> 
-                        <input type="checkbox" id="checkbox12" name="opcion12" class="custom-checkbox">
+                        <input (change)="onCheckboxChange('Salsa', $event)" type="checkbox" id="checkbox12" name="opcion12" class="custom-checkbox">
                         <label for="checkbox12"> Salsa </label>
                       </div>
                 </div>
               </div>
               <div class="center"> 
-                <a class="my-button" (click)="mostrarComponente()">Siguiente</a>
+                <a (click)="session_localStorage()" class="my-button">Siguiente</a>
               </div>
           </div>
-          <!-- Mostrar app-instrumentos-card si selectedOption es 'musico_artista' -->
-          <app-instrumentos-card *ngIf="selectedOption === '0'"></app-instrumentos-card>
-          
-          <!-- Mostrar app-integrantes-card si selectedOption es 'banda_dueto' -->
-          <app-integrantes-card *ngIf="selectedOption === '1'"></app-integrantes-card>
     </form>
 </div>

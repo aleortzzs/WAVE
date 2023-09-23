@@ -8,20 +8,8 @@ import { Router } from '@angular/router';
 })
 export class SignupComponent implements OnInit{
   @Input() data:any ={
-    nombre: '',
-    apellido: '',
-    correo:'',
-    contrasena:'',
-    descripcion: '',
-    generos: [],
-   instrumentos: [],
-   fecha: '',
-   precio: '',
-   calificacion: '',
-   collab: '',
-   localizacion: '',
-   imagePath:'',
-    short: '',
+   correo:'',
+   contrasena: ''
   }
   constructor(public usuarioService: UsuariosService,public router: Router){
    
@@ -30,8 +18,8 @@ export class SignupComponent implements OnInit{
   ngOnInit(): void {
 
   }
-  createUsuario(){
-    this.usuarioService.createUsuario(this.data);
-  }  
+  
+  session_localStorage(){
+    localStorage.setItem('signupData', JSON.stringify(this.data));
+  } 
 }
-

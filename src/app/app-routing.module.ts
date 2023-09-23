@@ -9,8 +9,8 @@ import { SignupMusicoComponent } from './components/signup-musico/signup-musico.
 import { LoginComponent } from './components/login/login.component';
 import { UserResolver } from './Servicios/user-resolver.service';
 import { SignupMusico2Component } from './components/signup-musico2/signup-musico2.component';
-import { ContactoComponent } from './components/contacto/contacto.component';
-import { SignupComponent } from './components/signup/signup.component'
+import { SignupComponent } from './components/signup/signup.component';
+
 const routes: Routes = [
   {path:"signup", component:SignupComponent},
   {path:"", component: HomePageComponent},
@@ -22,10 +22,16 @@ const routes: Routes = [
   {path:"login", component:LoginComponent},
   {path: '', component: UserResolver},
   {path:"signup-musico2", component:SignupMusico2Component},
-  {path:"login", component:LoginComponent},
-  {path:"contacto", component:ContactoComponent},
-  {path:"signup", component:SignupComponent}
-
+  {
+    path: 'profile/:id',
+    component: ProfileComponent,
+    resolve: { user: UserResolver }
+  },
+  {
+    path: 'signup-musico/:id',
+    component: SignupMusicoComponent,
+    resolve: {UserResolver}
+  }
 ];
 
 @NgModule({

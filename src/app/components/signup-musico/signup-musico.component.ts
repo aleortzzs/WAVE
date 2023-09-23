@@ -6,33 +6,31 @@ import { UsuariosService } from 'src/app/Servicios/usuarios.service';
   styleUrls: ['./signup-musico.component.css']
 })
 export class SignupMusicoComponent implements OnInit {
-  data: any;
+  prevData: any;
+  @Input() data:any={
+  nombre:   '',
+  apellido :   '',
+  pais:   '',
+  fecha:   '',
+  }
 
   constructor(public usuarioService : UsuariosService){
   }
 
  ngOnInit(): void {
-  
+  this.prevData = JSON.parse(localStorage.getItem('signupData') || '{}')
  }
- addToSignUp(){
-  this.usuarioService.addToSignUp(this.data);
+ session_localStorage(){
+    localStorage.setItem('signupData',JSON.stringify(this.combineData()));
  }
- isSelected(genreId: string): boolean {
-  return this.data.genre.includes(genreId);
-}
+ 
+ combineData(){
+  const combineData={
+    ...this.prevData,
+    ...this.data
+      };  
+return combineData;
+ }
 
-updateGenreSelection(target: HTMLInputElement, genreId: string) {
-  const checked = target.checked;
 
-  if (checked) {
-    // Checkbox is checked, add the genre ID to the selected genres array
-    this.data.generos.push(genreId);
-  } else {
-    // Checkbox is unchecked, remove the genre ID from the selected genres array
-    const index = this.data.generos.indexOf(genreId);
-    if (index > -1) {
-      this.data.generos.splice(index, 1);
-    }
-  }
-}
 }

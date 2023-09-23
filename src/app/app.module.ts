@@ -20,6 +20,7 @@ import { UserResolver } from './Servicios/user-resolver.service';
 import { GenreService } from './Servicios/genre-service.service';
 import { UsuariosService} from './Servicios/usuarios.service';
 import { SignupComponent } from './components/signup/signup.component';
+
 @NgModule({
   declarations: [
     SignupComponent,

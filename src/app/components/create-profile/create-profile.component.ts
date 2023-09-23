@@ -7,6 +7,7 @@ import { UsuariosService } from 'src/app/Servicios/usuarios.service';
 })
 export class CreateProfileComponent implements AfterViewInit {
   cuadros: any[] = []; // Variable de matriz para almacenar los cuadros adicionales
+  prevData: any;
   @Input() data: any={
     short :'',
     descripcion:'',
@@ -18,10 +19,13 @@ export class CreateProfileComponent implements AfterViewInit {
     this.cuadros.push({}); // Agregar un nuevo cuadro vacío a la matriz
   }
 
-  selectedImage: string | ArrayBuffer | null = null;
-  addToSignUp2(){
-    this.usuarioService.addToSignUp2(this.data);
+  ngOnInit(): void{
+    this.prevData = JSON.parse(localStorage.getItem('signupData') || '{}')
   }
+ 
+
+  selectedImage: string | ArrayBuffer | null = null;
+
   onFileSelected(event: any) {
     const file = event.target.files[0];
     if (file) {
@@ -42,7 +46,17 @@ export class CreateProfileComponent implements AfterViewInit {
     const audioElement = document.getElementById("audio") as HTMLAudioElement;
     audioElement.load();
   }
-
+  session_localStorage(){
+    localStorage.setItem('signupData',JSON.stringify(this.combineData()));
+ }
+ 
+ combineData(){
+  const combineData={
+    ...this.prevData,
+    ...this.data
+      }; 
+    return combineData
+ }
 
   ngAfterViewInit(): void {
     
