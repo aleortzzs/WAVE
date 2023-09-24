@@ -48,12 +48,19 @@
                             </div>
                         </form>
                     </div>
+                    
                 </div>
-            <div class="col s6 push-s1">
-                <app-generos-card></app-generos-card>
-            </div>
+                <div class="col s6 push-s1">
+                    <ng-container *appDynamicComponent="mostrarGenerosCard">
+                        <app-generos-card (siguienteClick)="onSiguienteClick()"></app-generos-card>
+                    </ng-container>
+                      <ng-container *appDynamicComponent="!mostrarGenerosCard">
+                        <app-instrumentos-card></app-instrumentos-card>
+                      </ng-container>
+                </div>
                 
           </div>
+
           <br>
           <br>
           <br>

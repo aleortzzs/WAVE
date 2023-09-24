@@ -10,6 +10,7 @@ import { LoginComponent } from './components/login/login.component';
 import { UserResolver } from './Servicios/user-resolver.service';
 import { SignupMusico2Component } from './components/signup-musico2/signup-musico2.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { InstrumentosCardComponent } from './components/instrumentos-card/instrumentos-card.component';
 
 const routes: Routes = [
   {path:"signup", component:SignupComponent},
@@ -31,6 +32,9 @@ const routes: Routes = [
     path: 'signup-musico/:id',
     component: SignupMusicoComponent,
     resolve: {UserResolver}
+  },
+  {
+    path: 'instrumentos-card', component:InstrumentosCardComponent
   }
 ];
 

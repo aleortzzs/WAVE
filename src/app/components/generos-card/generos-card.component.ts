@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SignupComponent } from '../signup/signup.component';
 @Component({
@@ -7,6 +7,7 @@ import { SignupComponent } from '../signup/signup.component';
   styleUrls: ['./generos-card.component.css']
 })
 export class GenerosCardComponent {
+  @Output() siguienteClick = new EventEmitter<void>();
   prevData: any;
   @Input() data:any={
     genres: []
@@ -27,6 +28,7 @@ export class GenerosCardComponent {
    }
    session_localStorage(){
       localStorage.setItem('signupData',JSON.stringify(this.combineData()));
+      this.siguienteClick.emit();
    }
    
    combineData(){
