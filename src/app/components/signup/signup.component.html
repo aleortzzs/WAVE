@@ -1,35 +1,35 @@
 <html>
     <body> 
-         <br>
-            <div class="row nom">
-              <div class="col s6 left">
-                <img src="../../../assets/resources/logoWAVE.png" alt="WAVE" class="responsive-img">
+      <br>
+        <div class="row nom">
+          <div class="col s6 left">
+            <img src="../../../assets/resources/logoWAVE.png" alt="WAVE" class="responsive-img">
+          </div>
+          <div class="col s6 right">  
+            <form class="row">             
+              <div class="input-field centrar" style="margin-top: 100px;">
+                <div class="center-align">
+                  <label for="info"> Correo Electrónico</label>
+                  <input type="email" [(ngModel)]="data.correo" [ngModelOptions]="{standalone: true }" id="info"  placeholder="name@example.com" required>
+                </div>
               </div>
-              <div class="col s6 right">  
-                <form class="row">             
-                  <div class="input-field centrar" style="margin-top: 100px;">
-                    <div class="center-align">
-                      <label for="info"> Correo Electrónico</label>
-                      <input type="text" [(ngModel)]="data.correo" [ngModelOptions]="{standalone: true }" id="info"  placeholder="name@example.com" required>
-                    </div>
-                  </div>
-                  <div class="input-field centrar" >
-                    <div class="center-align">
-                    <label for="info2"> Contraseña  </label>
-                    <input type="password" [(ngModel)]="data.contrasena"  [ngModelOptions]="{standalone: true }" id="info2" required>
-                  </div>
-                  </div>
-                  <div class="input-field centrar" >
-                    <div class="center-align">
-                    <label for="info3"> Confirmar contraseña  </label>
-                    <input type="password" id="info3" required>
-                  </div>
+              <div class="input-field centrar" >
+                <div class="center-align">
+                  <label for="info2"> Contraseña  </label>
+                  <input type="password" [(ngModel)]="data.contrasena"  [ngModelOptions]="{standalone: true }" id="info2" required>
+                </div>
+              </div>
+              <div class="input-field centrar" >
+                <div class="center-align">
+                  <label for="info3"> Confirmar contraseña  </label>
+                  <input type="password" id="info3" required>
+                </div>
               </div>
               <div class="centrar" style="margin-top: 50px;"> 
-              <a (click)="session_localStorage() " href="http://localhost:4200/signup-musico/" class="my-button">Siguiente</a>
+                <a (click)="session_localStorage() " href="http://localhost:4200/signup-musico/" class="my-button">Siguiente</a>
               </div>
             </form>
-                </div>
-                </div> 
+          </div>
+        </div> 
     </body>
 </html>

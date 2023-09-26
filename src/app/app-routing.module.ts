@@ -35,6 +35,11 @@ const routes: Routes = [
   },
   {
     path: 'instrumentos-card', component:InstrumentosCardComponent
+  },
+  {
+    path: 'create-profile/:id',
+    component: CreateProfileComponent,
+    resolve: { user: UserResolver }
   }
 ];
 

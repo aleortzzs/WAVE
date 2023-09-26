@@ -4,9 +4,6 @@
     <body>
         <br>
         <br>
-        <br>
-        <br>
-        <br>
         <div class="row">
             <div class="col s4 push-s1">
                 <div class="card-1">
@@ -54,16 +51,13 @@
                     <ng-container *appDynamicComponent="mostrarGenerosCard">
                         <app-generos-card (siguienteClick)="onSiguienteClick()"></app-generos-card>
                     </ng-container>
-                      <ng-container *appDynamicComponent="!mostrarGenerosCard">
+                    <ng-container *appDynamicComponent="!mostrarGenerosCard">
                         <app-instrumentos-card></app-instrumentos-card>
-                      </ng-container>
+                    </ng-container>
                 </div>
                 
           </div>
 
-          <br>
-          <br>
-          <br>
           <br>
           <br>
           <br>

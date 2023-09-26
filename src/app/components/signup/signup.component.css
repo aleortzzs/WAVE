@@ -34,7 +34,7 @@ body, html {
   font-size: 18px;
   border-radius: 25px;
   padding: 0px 20px 0px 20px;
-  }
+  } 
   
   #info2{
     background-color: #E6E6E6;
@@ -75,7 +75,7 @@ body, html {
     border-radius: 0;
     outline: none;
     height: 3rem;
-    width: 420px;
+    width: 600px;
     font-size: 16px;
     margin: 0 0 8px 0;
     padding: 0;
