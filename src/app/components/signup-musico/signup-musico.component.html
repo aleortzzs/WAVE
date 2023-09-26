@@ -52,7 +52,7 @@
                         <app-generos-card (siguienteClick)="onSiguienteClick()"></app-generos-card>
                     </ng-container>
                     <ng-container *appDynamicComponent="!mostrarGenerosCard">
-                        <app-instrumentos-card></app-instrumentos-card>
+                        <app-instrumentos-card (siguienteClicked)="handleClick()" ></app-instrumentos-card>
                     </ng-container>
                 </div>
                 

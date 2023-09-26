@@ -26,11 +26,13 @@ export class SignupMusicoComponent implements OnInit {
   constructor(public usuarioService : UsuariosService){
   }
 
- ngOnInit(): void {
+handleClick(){
   this.prevData = JSON.parse(localStorage.getItem('signupData') || '{}')
- }
- session_localStorage(){
-    localStorage.setItem('signupData',JSON.stringify(this.combineData()));
+  localStorage.setItem('signupData', JSON.stringify(this.combineData()));
+  this.usuarioService.createUsuario(JSON.parse(localStorage.getItem('signupData')||'{}'));
+}
+ ngOnInit(): void {
+   
  }
  
  combineData(){

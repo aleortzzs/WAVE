@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,11 +7,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./instrumentos-card.component.css']
 })
 export class InstrumentosCardComponent {
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
   prevData: any;
-  @Input() data:any={
+  @Input() data: any = {
     instruments: []
   }
+  @Output() siguienteClicked = new EventEmitter<void>();
+
   onCheckboxChange(instrument: string, event: Event) {
     const target = event.target as HTMLInputElement;
     if (target.checked && !this.data.instruments.includes(instrument)) {
@@ -23,17 +25,18 @@ export class InstrumentosCardComponent {
   }
   ngOnInit(): void {
     this.prevData = JSON.parse(localStorage.getItem('signupData') || '{}')
-   }
-   session_localStorage(){
-      localStorage.setItem('signupData',JSON.stringify(this.combineData()));
-      this.router.navigate(['/create-profile']);
-   }
-   
-   combineData(){
-    const combineData={
+  }
+  session_localStorage() {
+    localStorage.setItem('signupData', JSON.stringify(this.combineData()));
+    this.siguienteClicked.emit();
+    this.router.navigate(['/create-profile']);
+  }
+
+  combineData() {
+    const combineData = {
       ...this.prevData,
       ...this.data
-        };  
-  return combineData;
-   }
+    };
+    return combineData;
+  }
 }
