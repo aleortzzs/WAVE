@@ -1,11 +1,14 @@
 import { Component, AfterViewInit,Input } from '@angular/core';
 import { UsuariosService } from 'src/app/Servicios/usuarios.service';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-create-profile',
   templateUrl: './create-profile.component.html',
   styleUrls: ['./create-profile.component.css']
 })
 export class CreateProfileComponent implements AfterViewInit {
+  userId: any;
+  user: any;
   cuadros: any[] = []; // Variable de matriz para almacenar los cuadros adicionales
   prevData: any;
   @Input() data: any={
@@ -14,13 +17,17 @@ export class CreateProfileComponent implements AfterViewInit {
     precio:'',
     collab:'',
   };
-  constructor(public usuarioService: UsuariosService){}
+  constructor(public route: ActivatedRoute,public usuarioService: UsuariosService){}
   agregarCuadro() {
     this.cuadros.push({}); // Agregar un nuevo cuadro vacío a la matriz
   }
 
   ngOnInit(): void{
     this.prevData = JSON.parse(localStorage.getItem('signupData') || '{}')
+    this.userId = this.route.snapshot.params['id'];
+    this.user = this.route.snapshot.data['user'];
+    this.route.data.subscribe(data => {
+      this.user = data['user']});
   }
  
 

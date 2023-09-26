@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Usuarios } from '../Model/Usuarios';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -53,9 +54,8 @@ export class UsuariosService {
     console.log(this.data1);
     console.log(this.data2);
   }
-  
 
-  createUsuario(user: Usuarios){
+  createUsuario(user: Usuarios): Observable<any>{
     const usuario: Usuarios ={
       _id: user._id,
       nombre: user.nombre,
@@ -70,18 +70,19 @@ export class UsuariosService {
      calificacion: '',
      collab: user.collab,
      localizacion: user.localizacion,
-     imagePath:'/assets/resources/manuelprofile.png',
+     imagePath:'/assets/resources/user.png',
       short: user.short
     };
     console.log(usuario);
-    return this.http.post(this.API_URLCREATE,usuario).subscribe(
-      response=>{
-        console.log(response);
-      },
-      error=>{
-        console.log(error);
-      }
-    );
+    return this.http.post(this.API_URLCREATE, usuario);
+    //return this.http.post(this.API_URLCREATE,usuario).subscribe(
+      //response=>{
+        //console.log(response);
+      //},
+      //error=>{
+        //console.log(error);
+      //}
+    //);
   }
 
 }

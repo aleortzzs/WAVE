@@ -29,7 +29,6 @@ export class InstrumentosCardComponent {
   session_localStorage() {
     localStorage.setItem('signupData', JSON.stringify(this.combineData()));
     this.siguienteClicked.emit();
-    this.router.navigate(['/create-profile']);
   }
 
   combineData() {
