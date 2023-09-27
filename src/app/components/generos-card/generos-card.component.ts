@@ -10,16 +10,16 @@ export class GenerosCardComponent {
   @Output() siguienteClick = new EventEmitter<void>();
   prevData: any;
   @Input() data:any={
-    genres: []
+    generos: []
   }
 
   onCheckboxChange(genre: string, event: Event) {
     const target = event.target as HTMLInputElement;
-    if (target.checked && !this.data.genres.includes(genre)) {
-      this.data.genres.push(genre);
-    } else if (!target.checked && this.data.genres.includes(genre)) {
+    if (target.checked && !this.data.generos.includes(genre)) {
+      this.data.generos.push(genre);
+    } else if (!target.checked && this.data.generos.includes(genre)) {
       const index = this.data.genres.indexOf(genre);
-      this.data.genres.splice(index, 1);
+      this.data.generos.splice(index, 1);
     }
   }
 

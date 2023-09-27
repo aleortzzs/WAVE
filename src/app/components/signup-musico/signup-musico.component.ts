@@ -20,38 +20,30 @@ export class SignupMusicoComponent implements OnInit {
   @Input() data:any={
   nombre:   '',
   apellido :   '',
-  pais:   '',
+  localizacion:   '',
   fecha:   '',
+  userId: ''
   }
 
   constructor(public usuarioService : UsuariosService, private router: Router){
   }
 
 handleClick(){
-  try {
-    // Obtener los datos de registro del localStorage
-    this.prevData = JSON.parse(localStorage.getItem('signupData') || '{}')
-  localStorage.setItem('signupData', JSON.stringify(this.combineData()));
-
-    // Crear el usuario utilizando el servicio y manejar la respuesta
-    this.usuarioService.createUsuario(this.combineData()).subscribe({
-      next: (response: any) => {
-        // La respuesta del servidor contiene el ID del usuario creado
-        const idUsuarioCreado = response._id; // Ajusta esto según la estructura de tu respuesta
-        console.log('ID del usuario creado:', idUsuarioCreado);
-        // Redirigir a la página "create-profile/{id}" utilizando el ID del nuevo usuario
-        this.router.navigate(['/create-profile', idUsuarioCreado]);
-      },
-      error: (error: any) => {
-        console.error('Error al crear el usuario:', error);
-        // Manejar el error aquí
-      }
-    });
-  } catch (error) {
-    console.error('Error al crear el usuario:', error);
-    // Manejar el error aquí
-  }
+  this.prevData = JSON.parse(localStorage.getItem('signupData') || '{}')
+  this.usuarioService.createUsuario(JSON.parse(localStorage.getItem('signupData')|| '{}'))
+  .subscribe(
+    (createdUser: any) =>{
+      this.data.userId = createdUser._id
+      localStorage.setItem('signupData', JSON.stringify(this.combineData()));
+      this.router.navigate(['create-profile', createdUser._id])
+      localStorage.setItem('userId', createdUser._id);
+    },
+    (error) => {
+      console.error("There was an error creating the user: ", error);
+    }
+  );
 }
+
  ngOnInit(): void {
    
  }
