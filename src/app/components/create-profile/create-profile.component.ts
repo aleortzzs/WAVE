@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./create-profile.component.css']
 })
 export class CreateProfileComponent implements AfterViewInit {
+  userId: any;
+  user: any;
   cuadros: any[] = []; // Variable de matriz para almacenar los cuadros adicionales
   prevData: any;
   user: any;
@@ -19,6 +21,7 @@ export class CreateProfileComponent implements AfterViewInit {
     precio:'',
     collab:'',
   };
+
   constructor(public usuarioService: UsuariosService, 
     public genreService: GenreService, 
     private route: ActivatedRoute,

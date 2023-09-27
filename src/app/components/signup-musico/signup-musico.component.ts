@@ -4,18 +4,18 @@ import { GenerosCardComponent } from '../generos-card/generos-card.component';
 import { DynamicComponentDirective } from 'src/app/dynamic-component.directive';
 import { Router } from '@angular/router';
 
-
-
 @Component({
   selector: 'app-signup-musico',
   templateUrl: './signup-musico.component.html',
   styleUrls: ['./signup-musico.component.css']
 })
 export class SignupMusicoComponent implements OnInit {
+
   mostrarGenerosCard: boolean = true;
   onSiguienteClick() {
     this.mostrarGenerosCard = false;
   }
+
   prevData: any;
   @Input() data:any={
   nombre:   '',

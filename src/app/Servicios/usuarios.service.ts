@@ -28,6 +28,7 @@ export class UsuariosService {
     return this.http.get<Usuarios[]>("http://localhost:3000/api/usuarios/" + id);
   }
 
+
   createUsuario(user: Usuarios): Observable<any> {
     const usuario: Usuarios = {
       _id: user._id,
