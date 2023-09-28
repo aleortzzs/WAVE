@@ -34,6 +34,7 @@ export class CreateProfileComponent implements AfterViewInit {
       this.userId = params['id'];
     });
   }
+
   getGenreName(genero: string){
     return this.genreService.getGenreName(genero)
   }
@@ -63,7 +64,6 @@ export class CreateProfileComponent implements AfterViewInit {
   session_localStorage(){
     localStorage.setItem('signupData',JSON.stringify(this.combineData()));
     this.user = JSON.parse(localStorage.getItem('signupData') || '{}');
-    console.log(this.user)
     this.updateUserById();
  }
  
@@ -72,7 +72,7 @@ export class CreateProfileComponent implements AfterViewInit {
       console.log('User ID is not availabe.');
       return;
     }
-
+    
     this.usuarioService.updateUsuariosById(this.userId, this.user)
       .subscribe(
         response => {

@@ -11,22 +11,30 @@
                 <div class="center-align">
                   <label for="info"> Correo Electrónico</label>
                   <input type="email" [(ngModel)]="data.correo" [ngModelOptions]="{standalone: true }" id="info"  placeholder="name@example.com" required>
+                  <script>
+                    function checkEmpty(){
+                      var userInput = document.getElementById('info').value
+                    if (userInput!= ""){
+                      
+                    }
+                    }
+                  </script>
                 </div>
               </div>
               <div class="input-field centrar" >
                 <div class="center-align">
                   <label for="info2"> Contraseña  </label>
-                  <input type="password" [(ngModel)]="data.contrasena"  [ngModelOptions]="{standalone: true }" id="info2" required>
+                  <input type="password" [(ngModel)]="data.contrasena"  [ngModelOptions]="{standalone: true }" id="info" required>
                 </div>
               </div>
               <div class="input-field centrar" >
                 <div class="center-align">
                   <label for="info3"> Confirmar contraseña  </label>
-                  <input type="password" id="info3" required>
+                  <input type="password" id="info" required>
                 </div>
               </div>
               <div class="centrar" style="margin-top: 50px;"> 
-                <a (click)="session_localStorage() " href="http://localhost:4200/signup-musico/" class="my-button">Siguiente</a>
+                <a (click)="signupTrigger() " class="my-button">Siguiente</a>
               </div>
             </form>
           </div>

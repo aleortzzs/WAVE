@@ -10,7 +10,7 @@ export class InstrumentosCardComponent {
   constructor(public usuarioService : UsuariosService, private router: Router) {  }
   prevData: any;
   @Input() data: any = {
-    instruments: []
+    instrumentos: []
   }
   @Output() siguienteClicked = new EventEmitter<void>();
 
