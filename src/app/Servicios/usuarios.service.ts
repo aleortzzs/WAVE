@@ -31,6 +31,7 @@ export class UsuariosService {
   getIdByEmail(email: string): Observable<{ userId: string }> {
     return this.http.get<{ userId: string }>(`http://localhost:3000/api/usuarios/getIdByEmail/${email}`);
   }
+  
 
 
   createUsuario(user: Usuarios): Observable<any> {

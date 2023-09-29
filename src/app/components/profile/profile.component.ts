@@ -13,16 +13,16 @@ import { SupabaseService } from 'src/app/Servicios/supabase.service';
 export class ProfileComponent implements OnInit, AfterViewInit{
   userId: any;
   user: any;
-  constructor(public route: ActivatedRoute, public genreService: GenreService,public usuarioService: UsuariosService, public router: Router, public supabaseService: SupabaseService){}
+  profileEmail: string | null;
+  constructor(public route: ActivatedRoute, public genreService: GenreService,public usuarioService: UsuariosService, public router: Router, public supabaseService: SupabaseService){
+    this.profileEmail = null;
+  }
   ngOnInit(): void{
     this.userId = this.route.snapshot.params['id'];
     this.user = this.route.snapshot.data['user'];
     this.route.data.subscribe(data => {
       this.user = data['user']});
-    document.addEventListener('DOMContentLoaded', function() {
-      var elems = document.querySelectorAll('.parallax');
-      var instances = M.Parallax.init(elems);
-    });
+
     document.addEventListener('DOMContentLoaded', function() {
       var elems = document.querySelectorAll('.carousel');
       var instances = M.Carousel.init(elems, {indicators: true, fullWidth:true, noWrap: true});
@@ -41,16 +41,24 @@ export class ProfileComponent implements OnInit, AfterViewInit{
 
   createProfile(){
   }
-  isCurrentUserProfile(): boolean {
+  isCurrentUserProfile(correo: string): boolean {
     const currentUserEmail = this.supabaseService.getUserEmail();
-
-    // Comparar con el correo electrónico del perfil actual
-    const profileEmail = 'correo-del-perfil-actual'; // Reemplaza esto con el correo electrónico del perfil actual
-
-    return currentUserEmail === profileEmail;
+    return correo === currentUserEmail;
   }
 
-  updateProfile(){
-    this.router.navigate(['/create-profile']);
+  updateProfile(id: string): void{
+    const userId = id; 
+    this.usuarioService.getUsuarioById(userId).subscribe(user => {
+      this.router.navigate(['/update-profile', userId], { state: { user } });
+      console.log(user);
+    });
   }
+  contact(id: string): void{
+    const userId = id; 
+    this.usuarioService.getUsuarioById(userId).subscribe(user => {
+      this.router.navigate(['/contacto', userId], { state: { user } });
+      console.log(user);
+    });
+  }
+
 }

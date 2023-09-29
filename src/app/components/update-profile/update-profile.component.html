@@ -5,16 +5,16 @@
             <div class="col l7 push-l1">
                 <div class="row">
                     <div class="col l6 push-l1 valign-wrapper">
-                         <span class="badge tag-genero valign-wrapper inicio-text" *ngFor="let genero of prevData.generos">{{ getGenreName(genero) }}</span>
+                         <span class="badge tag-genero valign-wrapper inicio-text" *ngFor="let genero of user.generos">{{ getGenreName(genero) }}</span>
                     </div>
                 </div>
-                <h2 class="inicio-text">{{prevData.nombre}} {{prevData.apellido}}</h2>
+                <h2 class="inicio-text">{{user.nombre}} {{user.apellido}}</h2>
                 <div class="row">
                     <div class="col l10">
                         <div class="card cuadro-descc">
                             <div class="card-content inicio-text">
                                 <span class="card-title">Descripción corta</span>
-                                <textarea id="textarea2" [(ngModel)]="data.short" class="desc-text texto" maxlength="100" placeholder="Ingresa tu descripción..."></textarea>
+                                <textarea id="textarea2" [(ngModel)]="user.short" class="desc-text texto" maxlength="100" placeholder="{{user.short}}"></textarea>
                             </div>
                         </div>
                     </div>
@@ -24,7 +24,7 @@
                         <div class="card cuadro-descc">
                             <div class="card-content inicio-text">
                                 <span class="card-title">Descripción</span>
-                                <textarea id="textarea2" [(ngModel)]="data.descripcion" class="desc-text texto" maxlength="205" placeholder="Ingresa tu descripción..."></textarea>
+                                <textarea id="textarea2" [(ngModel)]="user.descripcion" class="desc-text texto" maxlength="205" placeholder="{{user.descripcion}}"></textarea>
                             </div>
                         </div>
                     </div>
@@ -112,7 +112,7 @@
                                 <p>¿Abierto a collabs?</p>
                             </div>
                             <div class="col l3 center">
-                                <input [(ngModel)]="data.precio" type="text" class="inputp" placeholder="$$">
+                                <input [(ngModel)]="user.precio" type="text" class="inputp" placeholder="{{user.precio}}">
                                 <select class="select-wrapper">
                                     <option value="si">Sí</option>
                                     <option value="no">No</option>
@@ -139,9 +139,12 @@
                         </div>
                     </div>
                     <div class="center">
-                        <button (click)="session_localStorage()" class="wave inicio-text"> Guardar perfil</button>
+                        <button (click)="updateUserById()" class="wave inicio-text"> Guardar perfil</button>
                     </div>
                     <br>
+                </div>
+                <div class="center">
+                    <button class="wave inicio-text" (click)="borrarUser()">Eliminar Perfil</button>
                 </div>
             </div>
         </div>

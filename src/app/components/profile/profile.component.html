@@ -134,10 +134,12 @@
                         </div>
                     </div>
                     <div class="center">
-                        <button class="wave inicio-text" href="http://localhost:4200/contacto"><img class="iconitos" src="../../../assets/icons/handwave.png"> Wave</button>
+                        <button class="wave inicio-text" (click)="contact(user._id)"><img class="iconitos" src="../../../assets/icons/handwave.png"> Wave</button>
                     </div>
                 </div>
-                <button *ngIf="isCurrentUserProfile()" (click)="updateProfile()">Actualizar Perfil</button>
+                <div class="center">
+                    <button *ngIf="isCurrentUserProfile(user.correo)" (click)="updateProfile(user._id)" class="wave inicio-text">Actualizar</button>
+                </div>
             </div>
         </div>
     </div>

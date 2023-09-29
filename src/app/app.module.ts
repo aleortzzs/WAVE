@@ -22,6 +22,7 @@ import { UsuariosService} from './Servicios/usuarios.service';
 import { SignupComponent } from './components/signup/signup.component';
 import { DynamicComponentDirective } from './dynamic-component.directive';
 import { LoginComponent } from './components/login/login.component';
+import { UpdateProfileComponent } from './components/update-profile/update-profile.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { LoginComponent } from './components/login/login.component';
     InstrumentosCardComponent,
     GenerosCardComponent,
     IntegrantesCardComponent,
-    DynamicComponentDirective
+    DynamicComponentDirective,
+    UpdateProfileComponent
   ],
   imports: [
     BrowserModule,

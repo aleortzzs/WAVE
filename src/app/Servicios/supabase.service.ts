@@ -8,6 +8,7 @@ import {
   User,
  } from '@supabase/supabase-js';
 import { environment } from 'src/enviroment';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,7 @@ export class SupabaseService {
  private supabase: SupabaseClient
  _session: AuthSession | null= null
   
-constructor() {
+constructor(private http: HttpClient) {
     this.supabase = createClient(environment.supabaseUrl, environment.supabaseKey)
     this.supabase.auth.onAuthStateChange((event: AuthChangeEvent, session: AuthSession | null) => {
       this._session = session;
@@ -32,8 +33,10 @@ constructor() {
       }
     });
   }
-
-
+  eliminarPerfil(userId: string) {
+    // Hacer una solicitud HTTP DELETE al backend para eliminar el usuario
+    return this.http.delete(`http://localhost:3000/api/usuarios/borrar/${userId}`);
+  }
 signIn(credentials: {email: string, password: string}){
   return this.supabase.auth.signUp(credentials)
 }
