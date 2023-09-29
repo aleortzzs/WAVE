@@ -137,6 +137,7 @@
                         <button class="wave inicio-text" href="http://localhost:4200/contacto"><img class="iconitos" src="../../../assets/icons/handwave.png"> Wave</button>
                     </div>
                 </div>
+                <button *ngIf="isCurrentUserProfile()" (click)="updateProfile()">Actualizar Perfil</button>
             </div>
         </div>
     </div>

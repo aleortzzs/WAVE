@@ -21,10 +21,12 @@ import { GenreService } from './Servicios/genre-service.service';
 import { UsuariosService} from './Servicios/usuarios.service';
 import { SignupComponent } from './components/signup/signup.component';
 import { DynamicComponentDirective } from './dynamic-component.directive';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
     SignupComponent,
+    LoginComponent,
     AppComponent,
     FooterComponent,
     HeaderComponent,

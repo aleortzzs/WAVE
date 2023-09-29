@@ -10,17 +10,17 @@
             <div class="input-field centrar" style="margin-top: 170px;">
               <div class="center-align">
                 <label for="info"> Correo Electrónico</label>
-                <input type="email" id="info" placeholder="name@example.com">
+                <input type="email" [(ngModel)]="data.correo" [ngModelOptions]="{standalone: true }" id="info" placeholder="name@example.com">
               </div>
             </div>
             <div class="input-field centrar" >
               <div class="center-align">
                 <label for="info2"> Contraseña</label>
-                <input type="password" id="info2">
+                <input type="password" [(ngModel)]="data.contrasena" [ngModelOptions]="{standalone: true }" id="info2">
               </div>
             </div>
             <div class="centrar" style="margin-top: 60px;"> 
-              <a (click)="logInTrigger()" class="my-button" >Iniciar sesión</a>
+              <a class="my-button" (click)="logInTrigger()">Iniciar sesión</a>
             </div>
           </form>
         </div>

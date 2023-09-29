@@ -11,6 +11,7 @@ export class UsuariosService {
   API_URL = "http://localhost:3000/api/usuarios/";
   API_URLCREATE = "http://localhost:3000/api/crear/ ";
   API_URLUPDATE = "http://localhost:3000/api/update/usuario/"
+  API_URLDELETE = "http://localhost:3000/api/usuarios/borrar/:id"
   usuarios: Usuarios[] | undefined;
   constructor(private http: HttpClient, public router: Router) {
 
@@ -26,6 +27,9 @@ export class UsuariosService {
 
   getUsuarioById(id: string) {
     return this.http.get<Usuarios[]>("http://localhost:3000/api/usuarios/" + id);
+  }
+  getIdByEmail(email: string): Observable<{ userId: string }> {
+    return this.http.get<{ userId: string }>(`http://localhost:3000/api/usuarios/getIdByEmail/${email}`);
   }
 
 
