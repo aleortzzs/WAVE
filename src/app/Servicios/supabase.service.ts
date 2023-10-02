@@ -45,6 +45,11 @@ logIn(credentials: {email: string, password: string}){
   return this.supabase.auth.signInWithPassword(credentials)
 }
 
+async signOut(): Promise<void>{
+  const{error} = await this.supabase.auth.signOut()
+  console.log(this.isSessionActive())
+}
+
 isSessionActive(): boolean {
   return this._session !== null && this._session.user !== null;
 }
