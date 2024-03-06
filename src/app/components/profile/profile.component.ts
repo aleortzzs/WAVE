@@ -58,6 +58,7 @@ export class ProfileComponent implements OnInit, AfterViewInit{
     this.usuarioService.getUsuarioById(userId).subscribe(user => {
       this.router.navigate(['/contacto', userId], { state: { user } });
       console.log(user);
+      //change 2
     });
   }
 
